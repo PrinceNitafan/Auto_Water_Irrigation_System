@@ -1,0 +1,13 @@
+.pio/
+.pioenvs/
+.piolibdeps/
+.vscode/
+.idea/
+*.swp
+*.swo
+*.hex
+*.elf
+*.bin
+*.o
+*.a
+
