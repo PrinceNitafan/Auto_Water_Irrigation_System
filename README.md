@@ -2,8 +2,6 @@
 
 An automated plant watering project built with an Arduino Uno, capacitive soil moisture sensors, and a 4-channel relay module.
 
-Originally, this repo had two separate `.cpp` files in the root folder (one for a single pump and one for four pumps). I refactored the code into an `IrrigationZone` class under `include/` and `src/` so both single-pump and four-pump setups use the same code.
-
 ## How It Works
 
 Each `IrrigationZone` pairs one soil moisture sensor (`A0`-`A3`) with one relay pin (`2`-`5`):
@@ -48,7 +46,7 @@ Note: Power the water pumps from an external 5V battery pack or power supply thr
 
 ## Configuration
 
-Thresholds and pins can be adjusted in [`include/Config.h`](include/Config.h):
+Thresholds and pins can be adjusted in [`include/Config.h`]:
 
 - `NUM_ZONES`: Number of active zones (`4` by default, or `1` when using the `single` build environment)
 - `DRY_THRESHOLD`: `425` (pump turns on above this value)
